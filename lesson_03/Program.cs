@@ -1,2 +1,23 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿int[] array = new int[5]; // Завёл массив на 5 элементов
+for (int i = 0; i < 5; i++) // Заполнять будет пользователь.
+    array[i] = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine(string.Join(" ",array));
+/* Вывод
+10
+9 
+23
+-5
+6
+10 9 23 -5 6 */
+Console.WriteLine("[" + string.Join(", ",array) + "]"); // Более красивый вывод.
+// Как посчитать время работы программы, если мне нужно найти определенный элемент?
+Console.WriteLine(array[3]); // Сложности алгоритма О(1) О - это онатация.
+// Этот алгоритм будет работать за о от одного.
+/* Вывод
+10
+-6
+34
+0
+12
+[10, -6, 34, 0, 12]
+0  */
