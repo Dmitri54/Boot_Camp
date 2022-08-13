@@ -40,7 +40,7 @@ for (int i = 0; i < n; i++)
     array[i] = Convert.ToInt32(Console.ReadLine());
 }
 Console.WriteLine();
-Console.WriteLine("Начальный массив: [" + string.Join(",", array) + "]"); // Красивый вывод начального массива.
+Console.WriteLine("Начальный массив: [" + string.Join(", ", array) + "]"); // Красивый вывод начального массива.
 
 // Сортировка
 for (int i = 0; i < n - 1; i++)
@@ -48,7 +48,7 @@ for (int i = 0; i < n - 1; i++)
     int minIndex = i; // Завел локальный минимальный индекс.
     for (int j = i + 1; j < n; j++) // Завел ещё цикл для нахождения minIdex. Иду до n т.к. не факт, что последнее число окажется максимальным.
     {
-        if (array[i] < array[minIndex])
+        if (array[j] < array[minIndex])
             minIndex = j; // Когда выполняется в цикле (условия) выполняется только одно действие, фигурные скобки {} не ставятся.
     }
     int temp; // Вспомогательная переменная, для перемещения элемента.
