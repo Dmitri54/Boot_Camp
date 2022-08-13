@@ -58,3 +58,33 @@ for (int i = 0; i < n - 1; i++)
 }
 Console.WriteLine("Конечный массив: [" + string.Join(", ", array) + "]"); // Красивый вывод конечного массива.
 
+/* UTF-8 - это кодировка.
+Console.WriteLine(10 > 7); // Сравнит и выдаст False или True.
+При сравнении строк. 
+Примеру:
+привет - Эта строка будет больше, т.к. символ (п) стоит дальше по номеру чем символ (П).
+Привет
+------------------------------------------------------------------------------------------
+Поэтому сравнение строк в программировании происходит через кодировку!
+------------------------------------------------------------------------------------------
+string[] array = new string[5];
+for (int i = 0; i < 5; i++)
+{
+    array[i] = Console.ReadLine(); - Препод дал стотью по Console.ReadLine(); !!!
+}
+Console.Write("[" + string.Join(", ", array) + "]");
+for (int i = 0; i < 4; i++)
+{
+    int minIndex = i; 
+    for (int j = i + 1; j < 5; j++) 
+    {
+        if (array[j].Length < array[minIndex].Length)
+            minIndex = j;
+    }
+    string temp;
+    temp = array[minIndex];
+    array[minIndex] = array[i];
+    array[i] = temp;
+}
+Console.WriteLine("Конечный массив: [" + string.Join(", ", array) + "]");
+*/
