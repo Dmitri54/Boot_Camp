@@ -30,11 +30,17 @@ namespace Server
         void HandleClient(TcpClient client) // Создам функцию, которая отдельно будет держать соединение с клиентом, чтобы не было разрывов.
         {
             StreamReader sReader = new StreamReader(client.GetStream(), Encoding.UTF8);
+            StreamWriter sWriter = new StreamWriter(client.GetStream(), Encoding.UTF8);
             
             while (true)
             {
                 string message = sReader.ReadLine(); // Считал от клиента строку
                 Console.WriteLine($"Клиент написал - {message}");
+
+                Console.WriteLine("Дайте сообщение клиенту: ");
+                string answer = Console.ReadLine();
+                sWriter.WriteLine(answer);
+                sWriter.Flush();
             }
         }
 
